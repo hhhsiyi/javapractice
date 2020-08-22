@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"/>
+    <bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter"/>
+<!--只有这个bean是我自己写的嗷-->
+<!--    <bean id="/hello" class="com.hewen.controller.HelloController"/>-->
+    <bean id="/hewentest" class="com.hewen.controller.HelloController"/>
+    <bean id="/hello" class="com.hewen.controller.MyController"/>
+
+    <!--视图解析器:DispatcherServlet给他的ModelAndView-->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" id="InternalResourceViewResolver">
+        <!--前缀-->
+        <property name="prefix" value="/WEB-INF/jsp/"/>
+<!--        最后请求的项目路径文件就是/web-INF/jsp/**.jsp-->
+        <!--后缀-->
+        <property name="suffix" value=".jsp"/>
+    </bean>
+</beans>

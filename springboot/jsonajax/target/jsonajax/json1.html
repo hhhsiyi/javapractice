@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+var user = {//一个对象
+    name:"何文",
+    age:3,
+    sex:"男"
+}
+//输出一个对象
+console.log(user);
+//将js对象转换成json对象
+var s = JSON.stringify(user);
+console.log(s);
+//document.write(s);
+//{"name":"何文","age":3,"sex":"男"}输出是这样的！
+//document.write(user);
+//[object Object]
+//需要解析之后才行
+var u = JSON.parse(user);
+document.write(u.toString());
+</script>
+</body>
+</html>

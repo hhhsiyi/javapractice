@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd"
+       xmlns:c="http://www.springframework.org/schema/c"
+>
+<!--       xmlns:p="http://www.springframework.org/schema/p"-->
+<!--       xmlns:p="http://www.springframework.org/schema/c">-->
+
+<!--    <bean id="ServiceImpl" class="cn.csdn.service.ServiceImpl" scope="singleton"/>-->
+<!--    <bean id="account" class="com.foo.DefaultAccount" scope="prototype"/>-->
+<!--    <bean id="account" class="com.foo.DefaultAccount" singleton="false"/>-->
+    <bean id="addr" class="com.hewen.pojo.Address">
+        <property name="address" value="咸阳"/>
+    </bean>
+    <bean class="com.hewen.pojo.MyTest" id="mt">
+        <property name="name" value="何文"/>
+        <property name="age" value="2020"/>
+    </bean>
+    <!--P(属性: properties)命名空间 , 属性依然要设置set方法-->
+    <bean id="user" class="com.hewen.pojo.User" p:name="路淑妍" p:age="18"/>
+    <!--C(构造: Constructor)命名空间 , 属性依然要设置set方法-->
+    <bean id="user1" class="com.hewen.pojo.User" c:name="何文" c:age="28"/>
+
+    <bean id="student" class="com.hewen.pojo.Student">
+        <property name="name" value="小路小路是个美女"/>
+        <property name="address" ref="addr"/>
+<!--        ref是引用？？？？引用了上面的id=addr的bean数据-->
+<!--        数组注入-->
+        <property name="books">
+            <array>
+                <value>西游记</value>
+                <value>红楼梦</value>
+                <value>水浒传</value>
+            </array>
+        </property>
+<!--        list注入-->
+        <property name="hobbys">
+            <list>
+                <value>看电影</value>
+                <value>撸猫唱歌</value>
+                <value>打游戏</value>
+            </list>
+        </property>
+<!--        map注入-->
+        <property name="card">
+            <map>
+                <entry key="农行" value="6228210018013233472"/>
+                <entry key="建行" value="27313271387213981231"/>
+            </map>
+        </property>
+<!--        set注入-->
+        <property name="games">
+            <set>
+                <value>LOL</value>
+                <value>dota</value>
+                <value>只狼</value>
+            </set>
+        </property>
+<!--        null注入-->
+        <property name="wife"><null/></property>
+
+<!--        Properties注入-->
+        <property name="info">
+            <props>
+                <prop key="学号">1004161226</prop>
+                <prop key="性别">男</prop>
+                <prop key="姓名">小路小路</prop>
+            </props>
+        </property>
+    </bean>
+
+</beans>

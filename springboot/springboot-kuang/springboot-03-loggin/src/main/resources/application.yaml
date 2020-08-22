@@ -1,0 +1,49 @@
+server:
+  port: 8081
+---
+
+person:
+  name: hewen
+  age: 20
+  happy: false
+  birthday: 2020/07/20
+  maps: {k1: v1,k2: v2}
+  lists:
+    - code
+    - music
+    - girl
+  dog:
+    name: 汪汪汪
+    age: 3
+##yaml对空格的要求很高很高
+##调用一个普通的key-value
+#name: qing
+##调用一个对象
+#student:
+#  name: hewen
+#  age: 18
+##行内写法
+#student: {name: hewen,age: 18}
+##数组的写法
+#animal:
+#  - cat
+#  - dog
+#  - tigger
+#  - pig
+##数组的行内写法
+#animal: [cat,dog,tigger,pig]
+##普通的配置语法就这么麻烦
+##student.name = hewen
+server:
+  port: 8082
+spring:
+  profiles:
+    active: dev
+
+---
+server:
+  port: 8083
+spring:
+  profiles:
+    active: test
+##student.age = 18

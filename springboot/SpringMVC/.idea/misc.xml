@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/springmvc-01-servlet" />
+    <file type="web" url="file://$PROJECT_DIR$/springmvc-02-hello" />
+    <file type="web" url="file://$PROJECT_DIR$/springmvc-03-hello-annotation" />
+    <file type="web" url="file://$PROJECT_DIR$/springmvc-04-controller" />
+    <file type="web" url="file://$PROJECT_DIR$/springmvc-05-json" />
+    <file type="web" url="file://$PROJECT_DIR$/springmvc-06-ajax" />
+    <file type="web" url="file://$PROJECT_DIR$/springmvc-07-Interceptor" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/springmvc-01-servlet/pom.xml" />
+        <option value="$PROJECT_DIR$/springmvc-02-hello/pom.xml" />
+        <option value="$PROJECT_DIR$/springmvc-03-hello-annotation/pom.xml" />
+        <option value="$PROJECT_DIR$/springmvc-04-controller/pom.xml" />
+        <option value="$PROJECT_DIR$/springmvc-05-json/pom.xml" />
+        <option value="$PROJECT_DIR$/springmvc-06-ajax/pom.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/springmvc-07-Interceptor/springmvc-07-Interceptor/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="false" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

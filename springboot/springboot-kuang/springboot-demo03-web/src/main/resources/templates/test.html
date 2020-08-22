@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div th:text="${msg}"></div>
+<div th:utext="${msg}"></div>
+<hr>
+<div th:each="user:${users}">[[${user}]]</div>
+<h1>11</h1>
+<!--<div th:each="user:${users}" th:text="${user}"></div>-->
+
+<!--从users里遍历出来的每一个都叫user，然后把user进行转义展示出来-->
+</body>
+</html>
