@@ -24,6 +24,8 @@ public class toTest {
         service4.getUser();
         service4.setUserDao(new UserDaoMySqlImpl());
         service4.getUser();
+        ((UserServiceImpl) service4).setUserDao(new UserDaoOracleImpl());
+        service4.getUser();
     }
 
     @Test

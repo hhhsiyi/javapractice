@@ -24,6 +24,7 @@ public class UserServiceImpl implements UserService {
         userDao3.getUser();
     }
     private UserDao userDao4;
+    //利用set实现动态的值的注入，不需要每次都写
     public void setUserDao(UserDao userDao) {
         this.userDao4 = userDao;
     }
